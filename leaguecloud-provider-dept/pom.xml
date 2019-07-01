@@ -13,11 +13,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>spring.aigu.cloud</groupId>
-            <artifactId>leaguecloud</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
         </dependency>
@@ -54,6 +49,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>spring.aigu.cloud</groupId>
+            <artifactId>leaguecloud-api</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
