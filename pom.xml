@@ -9,7 +9,13 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>leaguecloud-api</module>
-        <module>leaguecloud-provider-dept</module>
+        <module>leaguecloud-provider-dept8001</module>
+        <module>leaguecloud-consumer-dept</module>
+        <module>leaguecloud-eureka7001</module>
+        <module>leaguecloud-eureka7002</module>
+        <module>leaguecloud-eureka-7003</module>
+        <module>leaguecloud-provider-dept8002</module>
+        <module>leaguecloud-provider-dept8003</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -76,4 +82,25 @@
 
     </dependencyManagement>
 
+    <!--标识允许访问src\main\resources，并且开启过滤，使用插件解析 以此$开头结尾的-->
+    <build>
+        <finalName>leaguecloud</finalName>
+        <resources>
+            <resource>
+                <directory>src\main\resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimiter>$</delimiter>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

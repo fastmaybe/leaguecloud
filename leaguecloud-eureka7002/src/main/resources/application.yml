@@ -1,0 +1,13 @@
+server:
+  port: 7002
+eureka:
+  server:
+    enable-self-preservation: true # eureka自我保护机制 默认开启 建议开启
+  instance:
+    hostname: eureka7002.com  #eureka服务端实例
+  client:
+    register-with-eureka: false  #false 不向eurekaz注册自己
+    fetch-registry: false   #false 标识自身是注册中心 不需要检索
+    service-url:
+      # 单机defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  # 设置与eureka服务交互的地址
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/  #集群 设置与eureka服务交互的地址

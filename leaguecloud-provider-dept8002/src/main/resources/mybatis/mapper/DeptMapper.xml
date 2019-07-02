@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aigu.cloud.dao.DeptDao">
+    <resultMap id="baseMap" type="com.aigu.cloud.entity.Dept">
+        <id column="deptno" property="deptno" jdbcType="BIGINT" />
+        <result column="dname" jdbcType="VARCHAR" property="name"/>
+        <result column="db_source" property="db_source" jdbcType="VARCHAR"/>
+    </resultMap>
+    <insert id="addDept" >
+       INSERT INTO dept(dname,db_source) VALUES (#{name},DATABASE());
+    </insert>
+    <select id="findById" resultMap="baseMap" parameterType="Long">
+         select * from dept where deptno = #{id}
+    </select>
+    <select id="findAll" resultMap="baseMap">
+        select * from dept
+    </select>
+
+</mapper>
