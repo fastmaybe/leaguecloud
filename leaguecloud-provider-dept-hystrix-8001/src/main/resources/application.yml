@@ -1,0 +1,37 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.aigu.cloud.entity
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+spring:
+  application:
+    name: leaguecloud-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB01
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+
+eureka:
+  client:
+    service-url:
+      # 单机版注册服务defaultZone: http://localhost:7001/eureka   # 注册服务
+      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: leaguecloud-dept8001-hystrix
+    prefer-ip-address: true
+info:
+  app.name: leaguecloud
+  company.name: www.myzp.store
+  build.artifactId: $project.artifactId$
+  vuild.version: $project.version$

@@ -16,6 +16,8 @@
         <module>leaguecloud-eureka-7003</module>
         <module>leaguecloud-provider-dept8002</module>
         <module>leaguecloud-provider-dept8003</module>
+        <module>leaguecloud-consumer-dept-feign</module>
+        <module>leaguecloud-provider-dept-hystrix-8001</module>
     </modules>
     <packaging>pom</packaging>
 

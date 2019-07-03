@@ -10,6 +10,9 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.Resource;
 import java.util.List;
 
+/**
+ * 面向 ribbon RestTemplate 调用微服务
+ */
 @RestController
 public class DeptController_Consumer {
 
