@@ -1,0 +1,29 @@
+server:
+  port: 9527
+
+
+spring:
+  application:
+    name: leaguecloud-zuul-gateway
+
+
+eureka:
+  client:
+    service-url:
+      # 单机版注册服务defaultZone: http://localhost:7001/eureka   # 注册服务
+      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+info:
+  app.name: leaguecloud
+  company.name: www.myzp.store
+  build.artifactId: $project.artifactId$
+  vuild.version: $project.version$
+zuul:
+  routes:
+    aidept.serviceId: leaguecloud-dept  #真实的微服务
+    aidept.path: /dept/**
+  # ignored-services: "leaguecloud-dept"   #由于上面做了 路径映射 真实和 映射都可以访问  因此加入忽略真实服务
+  ignored-services: "*"   #由于上面做了 路径映射 真实和 映射都可以访问  因此加入忽略真实服务  只能通过映射路径访问  * 匹配所有真实微服务名
+  prefix: /fast   #添加前缀  需要在映射路径前加上

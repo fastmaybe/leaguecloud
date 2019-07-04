@@ -9,25 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>leaguecloud-provider-dept</artifactId>
+    <artifactId>leaguecloud-zuul-gateway-9527</artifactId>
+
 
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-        </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
@@ -51,6 +42,12 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
+        <!--&lt;!&ndash;zuul&ndash;&gt;-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
+        </dependency>
+
         <!--热部署-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -60,20 +57,25 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-        <!--添加微服务页面简介  dashboard监控使用-->
+        <!--添加微服务页面简介-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--hystrix-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
         <dependency>
             <groupId>spring.aigu.cloud</groupId>
             <artifactId>leaguecloud-api</artifactId>
             <version>${project.version}</version>
-            <scope>compile</scope>
         </dependency>
+
+
     </dependencies>
-
-
 
 </project>

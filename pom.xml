@@ -18,6 +18,10 @@
         <module>leaguecloud-provider-dept8003</module>
         <module>leaguecloud-consumer-dept-feign</module>
         <module>leaguecloud-provider-dept-hystrix-8001</module>
+        <module>leaguecloud-consumer-hystrix-dashboard</module>
+        <module>leaguecloud-zuul-gateway-9527</module>
+        <module>leaguecloud-config-3344</module>
+        <module>leaguecloud-config-client-3355</module>
     </modules>
     <packaging>pom</packaging>
 

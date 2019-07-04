@@ -1,0 +1,17 @@
+server:
+  port: 3344
+
+
+spring:
+  application:
+    name: leaguecloud-config
+  cloud:
+    config:
+      server:
+        git:
+#          uri: git@github.com:fastmaybe/leaguecloud-config.git  shh 协议不可用  个人原因暂未找到
+          uri: https://github.com/fastmaybe/leaguecloud-config.git
+#          username: ****
+#          password: ****
+#          strict-host-key-checking: true
+
