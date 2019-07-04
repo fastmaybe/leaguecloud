@@ -1,4 +1,6 @@
 ### Spring Cloud学习简介 
+##### 此处只写简易技术说明，易于学习，代码提供实操。详细官方解释参考springCloud官方文档。
+       
     脑图 链接：https://pan.baidu.com/s/1DKaGxl_-lTDVZAN1jHMejg 
        提取码：ktgk 
     在springboot,对于springcloud下的技术使用一般起步步骤
