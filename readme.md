@@ -1,4 +1,6 @@
-### Spring Cloud学习简介
+### Spring Cloud学习简介 
+    脑图 链接：https://pan.baidu.com/s/1DKaGxl_-lTDVZAN1jHMejg 
+       提取码：ktgk 
     在springboot,对于springcloud下的技术使用一般起步步骤
         1，添加依赖
         2，启动类支持  @Enable***
@@ -46,7 +48,7 @@
     spring:
       profiles:
         active: 
-        - dev   (注意此处前面横岗空格)
+        - dev   (注意此处前面横杠空格)
     ---
     server: 
       port: 8201
